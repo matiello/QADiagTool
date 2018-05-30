@@ -1,6 +1,10 @@
 # QADiagTool
+=====
+[![AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-brightgreen.svg)](./LICENSE)
 
-Command Line tool for load & performance tests for server to server production validation.
+## What is the QA Diag Tool?
+
+It is a command Line tool for load & peformance tests for server to server production validation.
 
 It currently supports performance tests for the following platforms:
 * Oracle SQL Test
