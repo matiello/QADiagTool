@@ -13,15 +13,15 @@ It currently supports performance tests for the following platforms:
 ### Oracel SQL Databse
 
 #### How to do a 200 bytes query performance test on Oracle Database with 5 threads and 1000 executions each?
-```QADiag -strategy count 1000 -threads 5 -db jdbc:oracle:thin:@prodHost:1521:ORCL SCOTT TIGER -bytes 200 ```
+```QADiag -db jdbc:oracle:thin:@prodHost:1521:ORCL SCOTT TIGER -bytes 200 -strategy count 1000 -threads 5 ```
 
 #### How to do a specific query performance test on Oracle Database with 30 threads and 1000 executions each?
-```QADiag -strategy count 1000 -threads 30 -db jdbc:oracle:thin:@prodHost:1521:ORCL SCOTT TIGER -querySQL "SELECT 1 FROM DUAL"```
+```QADiag -db jdbc:oracle:thin:@prodHost:1521:ORCL SCOTT TIGER -querySQL "SELECT 1 FROM DUAL" -strategy count 1000 -threads 30```
 
 ### HTTP
 
 #### How to do a specific HTTP GET performance test on with 10 threads and 10000 executions each?
-```QADiag -strategy count 10000 -threads 10 -http "http://www.website.com" GET```
+```QADiag -http "http://www.website.com" GET -strategy count 10000 -threads 10```
     
 ## Usage
 ```
