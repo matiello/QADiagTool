@@ -1,5 +1,4 @@
 # QADiagTool
-=====
 [![AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-brightgreen.svg)](./LICENSE)
 
 ## What is the QA Diag Tool?
