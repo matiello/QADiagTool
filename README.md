@@ -1,6 +1,6 @@
 # QADiagTool
 [![AGPL v3](https://img.shields.io/badge/license-GPL%20v3-brightgreen.svg)](./LICENSE)
-[![build](https://api.travis-ci.com/matiello/QADiagTool.svg?branch=master)]
+[![Build Status](https://travis-ci.com/matiello/QADiagTool.svg?branch=master)](https://travis-ci.com/matiello/QADiagTool)
 
 ## What is the QA Diag Tool?
 
