@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <groupId>insightlabs</groupId>
+	<artifactId>qa-diag</artifactId>
+	<packaging>pom</packaging>
+	<version>3.1</version>
+
+    <modules>
+        <module>qa-diag-core</module>
+        <module>qa-diag-plg-http</module>
+        <module>qa-diag-plg-jms-activemq</module>
+        <module>qa-diag-plg-jms-hornetq</module>
+        <module>qa-diag-plg-selftest</module>
+        <!-- <module>qa-diag-plg-sql-oracle</module> -->
+    </modules>
+
+</project>
