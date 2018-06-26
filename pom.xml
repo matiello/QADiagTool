@@ -6,6 +6,7 @@
 	<artifactId>qa-diag</artifactId>
 	<packaging>pom</packaging>
 	<version>3.1</version>
+	<name>Insight Labs - QA Diagnostics Tool</name>
 
     <modules>
         <module>qa-diag-core</module>
