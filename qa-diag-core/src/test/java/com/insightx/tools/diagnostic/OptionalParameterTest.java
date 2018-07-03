@@ -3,9 +3,8 @@ package com.insightx.tools.diagnostic;
 import junit.framework.TestCase;
 
 import com.insightx.tools.diagnostic.parameters.OptionalParameter;
-import com.insightx.tools.diagnostic.AppCLI;
 
-public class AppTest extends TestCase {
+public class OptionalParameterTest extends TestCase {
   private java.util.List emptyList;
 
   /**
@@ -39,13 +38,6 @@ public class AppTest extends TestCase {
     assertEquals(shellKey, op.getShellKey());
     assertEquals(type, op.getType());
     assertEquals(value, op.getValue());    
-    assertEquals(defaultValue, op.getDefaultValue());
-    
-    AppCLI app = new AppCLI();
-    String [] args = new String [2];
-    args[0] = "AppCLI";
-    args[1] = "-h";
-    app.main(args);
-    assertEquals(1,1);
+    assertEquals(defaultValue, op.getDefaultValue());   
   }
 }
