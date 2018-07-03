@@ -42,6 +42,10 @@ public class AppTest extends TestCase {
     assertEquals(defaultValue, op.getDefaultValue());
     
     AppCLI app = new AppCLI();
+    String [] args = new String [2];
+    args[0] = "AppCLI";
+    args[1] = "-h";
+    app.main(args);
     assertEquals(1,1);
   }
 }
