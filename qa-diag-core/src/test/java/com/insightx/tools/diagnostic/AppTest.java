@@ -2,6 +2,8 @@ package com.insightx.tools.diagnostic;
 
 import junit.framework.TestCase;
 
+import com.insightx.tools.diagnostic.parameters.OptionalParameter;
+
 public class AppTest extends TestCase {
   private java.util.List emptyList;
 
@@ -20,7 +22,9 @@ public class AppTest extends TestCase {
   }
   
   public void testSomeBehavior() {
-    AppCLI.main("AppCLI", "-h");
+    
+    OptionalParameter op = new OptionalParameter("id", "description", "shellKey", 1, "default value");
+    
     assertEquals(1, 1);
   }
 }
