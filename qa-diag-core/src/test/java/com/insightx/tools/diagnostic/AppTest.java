@@ -3,6 +3,7 @@ package com.insightx.tools.diagnostic;
 import junit.framework.TestCase;
 
 import com.insightx.tools.diagnostic.parameters.OptionalParameter;
+import com.insightx.tools.diagnostic.AppCLI;
 
 public class AppTest extends TestCase {
   private java.util.List emptyList;
@@ -23,8 +24,24 @@ public class AppTest extends TestCase {
   
   public void testSomeBehavior() {
     
-    OptionalParameter op = new OptionalParameter("id", "description", "shellKey", 1, "default value");
+    String id = "id";
+    String description = "description";
+    String shellKey = "shellKey";
+    int type = 1;
+    String defaultValue = "defaultValue";
+    String value = "value";
     
-    assertEquals(1, 1);
+    OptionalParameter op = new OptionalParameter(id, description, shellKey, type, defaultValue);
+    op.setValue (value);
+    
+    assertEquals(id, op.getId());
+    assertEquals(description, op.getId());
+    assertEquals(shellKey, op.getId());
+    assertEquals(id, op.getType());
+    assertEquals(value, op.getValue());    
+    assertEquals(defaultValue, op.getDefaultValue());
+    
+    AppCLI app = new AppCLI();
+    assertEquals(1,1);
   }
 }
