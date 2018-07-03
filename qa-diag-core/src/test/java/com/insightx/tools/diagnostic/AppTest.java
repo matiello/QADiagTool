@@ -35,9 +35,9 @@ public class AppTest extends TestCase {
     op.setValue (value);
     
     assertEquals(id, op.getId());
-    assertEquals(description, op.getId());
-    assertEquals(shellKey, op.getId());
-    assertEquals(id, op.getType());
+    assertEquals(description, op.getDescription());
+    assertEquals(shellKey, op.getShellKey());
+    assertEquals(type, op.getType());
     assertEquals(value, op.getValue());    
     assertEquals(defaultValue, op.getDefaultValue());
     
