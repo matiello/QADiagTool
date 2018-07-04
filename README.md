@@ -135,11 +135,9 @@ This is a plugin based tool. It is very easy to extend it.
 
 If you want to create new plugins for it, please refer to the qa-diag-plg-selftest project template.
 
-### 6.2 Creating a new plugin project
-
 First all you have to do is to create a new project based on the qa-diag-plg-selftest project located on ```https://github.com/matiello/QADiagTool/tree/master/qa-diag-plg-selftest```
 
-### 6.1 Start Coding
+### 6.2 Start Coding
 
 - Edit the```pom.xml``` and add the library that you need to use on the test. (e.g. a database connector, a rest webservice client, etc)
 
