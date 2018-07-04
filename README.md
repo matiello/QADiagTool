@@ -2,7 +2,7 @@
 [![AGPL v3](https://img.shields.io/badge/license-GPL%20v3-brightgreen.svg)](./LICENSE)
 [![Build Status](https://travis-ci.com/matiello/QADiagTool.svg?branch=master)](https://travis-ci.com/matiello/QADiagTool)
 
-## What is the QA Diag Tool?
+## 1 What is the QA Diag Tool?
 
 It is a command Line tool for load & peformance tests for server to server production validation.
 
@@ -12,22 +12,50 @@ It currently supports performance tests for the following platforms:
 * JMS activeMQ Test
 * JMS hornetQ Test
 
-## Examples
+## 2 Examples
 
-### Oracel SQL Databse
+### 2.1 Oracel SQL Databse
 
-#### How to do a 200 bytes query performance test on Oracle Database with 5 threads and 1000 executions each?
+#### 2.1.1 How to do a 200 bytes query performance test on Oracle Database with 5 threads and 1000 executions each?
 ```QADiag -db jdbc:oracle:thin:@prodHost:1521:ORCL SCOTT TIGER -bytes 200 -strategy count 1000 -threads 5 ```
 
-#### How to do a specific query performance test on Oracle Database with 30 threads and 1000 executions each?
+#### 2.1.2 How to do a specific query performance test on Oracle Database with 30 threads and 1000 executions each?
 ```QADiag -db jdbc:oracle:thin:@prodHost:1521:ORCL SCOTT TIGER -querySQL "SELECT 1 FROM DUAL" -strategy count 1000 -threads 30```
 
-### HTTP
+### 2.2  HTTP
 
-#### How to do a specific HTTP GET performance test on with 10 threads and 10000 executions each?
+#### 2.2.1 How to do a specific HTTP GET performance test on with 10 threads and 10000 executions each?
 ```QADiag -http "http://www.website.com" GET -strategy count 10000 -threads 10```
     
-## Usage
+## 3 Getting Started
+
+### 3.1 Requirements
+This tool is compatible with the following operating system:
+
+Directory | Content
+------------- | -------------
+JVM  | 1.6+
+
+### 3.2 Instalation
+Download the latest release at https://github.com/matiello/QADiagTool/tree/master/Releases
+Unzip on the contents on your destination App folder
+- Windows: C:\Program Files\
+- Linux: /opt/
+
+The tool has the following directories:
+
+Directory | Content
+------------- | -------------
+./bin  | The app executables
+./cfg  | The app configuration files (currently not in use)
+./data  | The app local data files for storing scenarios execution
+./lib  | The core application libs
+./lic  | The app license (currently not in use) 
+./log  | The internal app logs
+./plugins  | The place to store the app plugins 
+./samples  | Some usage examples
+
+## 4. Usage
 ```
 Usage: QADiag <Selection Option> [Optional Parameters]
   Support Selection Options:
@@ -95,15 +123,33 @@ ${queryKey},${bytes}) FROM DUAL)
       -showSumary           : Shows the result sumary (Default true)
 ```
 
-## Cautions
+## 5. Cautions
 
 Please take note that this client do use machine resources (such as CPU). In order to obtaion better results, it is better to run in on the "client" server in order to accuratly measure results.
 
-## How to extend it?
+## 6. How to extend it?
 
-This is a plugin based tool. If you want to create new plugins for it, please refer to the qa-diag-plg-selftest project template.
+### 6.1 First steps
 
-## How to donate?
+This is a plugin based tool. It is very easy to extend it.
+
+If you want to create new plugins for it, please refer to the qa-diag-plg-selftest project template.
+
+### 6.2 Creating a new plugin project
+
+First all you have to do is to create a new project based on the qa-diag-plg-selftest project located on ```https://github.com/matiello/QADiagTool/tree/master/qa-diag-plg-selftest```
+
+### 6.1 Start Coding
+
+- Edit the```pom.xml``` and add the library that you need to use on the test. (e.g. a database connector, a rest webservice client, etc)
+
+- Edit the```src/main/java/com/insightx/tools/diagnostic/validators/template/TemplateValidatorInstance.java``` and add the code that you want to measure performance
+
+- Edit the```src/main/java/com/insightx/tools/diagnostic/validators/template/TemplateValidatorFactory.java``` and add the paramters that the plugin needs as command line arguments 
+
+- Note that, if you change the plugin file names, you need to change the content of ```src/main/resources/com.insightx.tools.diagnostic.LoadValidationFactoryInterface```
+
+## 7. How to donate?
 
 ```
 If you want to contribute to the autor, donations are accepted with the following wallets: 
