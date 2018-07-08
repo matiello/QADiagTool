@@ -14,7 +14,7 @@
         <module>qa-diag-plg-jms-activemq</module>
         <module>qa-diag-plg-jms-hornetq</module>
         <module>qa-diag-plg-selftest</module>
-        <module>qa-diag-plg-sql-oracle</module>
+        <!-- <module>qa-diag-plg-sql-oracle</module> -->
     </modules>
 
 </project>
