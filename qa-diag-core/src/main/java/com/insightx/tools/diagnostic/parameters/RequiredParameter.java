@@ -8,6 +8,9 @@ public class RequiredParameter {
 	private ParameterValidator validator;
 
 	public RequiredParameter (String id, String description, int type, ParameterValidator validator) {
+		this.id = id;
+		this.description = description;
+		this.type = type;
 		this.validator = validator;
 	}
 	
