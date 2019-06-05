@@ -34,7 +34,7 @@ This tool is compatible with the following operating system:
 
 Directory | Content
 ------------- | -------------
-JVM  | 1.6+
+JVM  | 1.6+ 
 
 ### 3.2 Instalation
 Download the latest release at https://github.com/matiello/QADiagTool/tree/master/Releases
